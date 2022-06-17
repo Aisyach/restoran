@@ -37,7 +37,7 @@ class MenuController extends Controller
     {
         $input = $request->all();
         Menu::create($input);
-        return redirect('menu')->with('flash_message', 'Menu Berhasil Ditambahkan!');
+        return redirect('menu')->with('flash_message', 'Menu Telah Ditambahkan!');
     }
 
     /**
@@ -88,6 +88,6 @@ class MenuController extends Controller
     public function destroy($id)
     {
         menu::destroy($id);
-        return redirect('menu')->with('flash_message', 'Menu Dihapus!');  
+        return redirect('menu')->with('flash_message', 'Menu Berhasil Dihapus!');  
     }
 }
